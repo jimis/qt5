@@ -26,7 +26,7 @@ case "$ImageOS" in
         ;;
     win19)
         DEPS=""
-        TOOLS="ninja"
+        TOOLS="ninja ccache"
         INSTALL_CMD="choco install"
         INSTALL_CMD_POSTFIX="--yes --no-progress"
         CONFIGURE_FLAGS="-system-sqlite -system-pcre -system-zlib -system-freetype -system-libpng -system-libjpeg"
@@ -46,7 +46,6 @@ case "$RUNNER_OS" in
         # Header pthread.h from postgres is included and creates issues.
         # Also library zlib.lib is linked instead of the system one.
         rm -rf "C:/Program Files/PostgreSQL/"
-        choco install ccache --version 3.7.12 --yes --no-progress --not-silent --verbose --debug
     ;;
 esac
 
