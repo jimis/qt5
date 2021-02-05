@@ -29,7 +29,7 @@ case "$ImageOS" in
         TOOLS="ninja"
         INSTALL_CMD="choco install"
         INSTALL_CMD_POSTFIX="--yes --no-progress"
-        CONFIGURE_FLAGS="-qt-sqlite -qt-pcre -qt-zlib -qt-freetype -qt-libpng -qt-libjpeg -qt-harfbuzz -no-feature-sql-psql -no-feature-sql-mysql -no-feature-sql-odbc"
+        CONFIGURE_FLAGS="-system-sqlite -system-pcre -system-zlib -system-freetype -system-libpng -system-libjpeg"
         BAT_EXTENSION=".bat"
         ;;
 esac
